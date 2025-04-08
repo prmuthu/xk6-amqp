@@ -46,7 +46,7 @@ func (a *AMQP) Start(options Options) *amqp.Session {
 		log.Fatalf("Failed to connect: %v", err)
 	}
 
-	fmt.Println("Connected to AMQP server")
+	// fmt.Println("Connected to AMQP server")
 
 	// Open a session
 	session, err := conn.NewSession(ctx, nil)
@@ -85,7 +85,7 @@ func (a *AMQP) Publish(options PublishOptions) error {
 	if err := sender.Send(ctx, message, nil); err != nil {
 		log.Fatalf("Failed to send message: %v", err)
 	}
-	fmt.Println("Message sent successfully")
+	// fmt.Println("Message sent successfully")
 	return nil
 }
 
@@ -110,7 +110,7 @@ func (a *AMQP) Listen(options ListenOptions) string {
 	if error != nil {
 		log.Fatalf("Failed to accept message: %v", err)
 	}
-	fmt.Println("Message accepted successfully")
+	// fmt.Println("Message accepted successfully")
 	return string(message)
 }
 
