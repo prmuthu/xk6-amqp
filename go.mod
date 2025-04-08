@@ -46,3 +46,5 @@ require (
 	google.golang.org/protobuf v1.31.1-0.20231027082548-f4a6c1f6e5c1 // indirect
 	gopkg.in/guregu/null.v3 v3.3.0 // indirect
 )
+
+replace github.com/grafana/xk6-amqp => github.com/prmuthu/xk6-amqp v0.0.1
